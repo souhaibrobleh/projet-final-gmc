@@ -10,57 +10,71 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    <script type="text/javascript" src="js/highslide.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/highslide.css" />
     <link rel="stylesheet" href="css/style.css">
     <script src="js/scrip.js"></script>
+    <script type="text/javascript">
+      //<![CDATA[
+      hs.registerOverlay({
+          html: '<div class="closebutton" onclick="return hs.close(this)" title="Close"></div>',
+          position: 'top right',
+          fade: 2 // fading the semi-transparent overlay looks bad in IE
+      });
+      
+      
+      hs.graphicsDir = 'js/graphics/';
+      hs.wrapperClassName = 'borderless';
+      //]]>
+      </script>
 </head>
 <body>
     
 <!-- Menu -->
 <div class="Menu">
-    <nav class="navbar navbar-expand-lg navbar-light  my-navbar fixed-top ">
-        <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="#">
-              <img src="image/44155158_725641024495303_2323803372739624960_n.png" style="height: 100px">
-          </a>
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 lien">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Accueil<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="hotel.html">Hotel</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="lieu.html">Lieu</a>
-            </li>
-            <li class="nav-item active">
-                    <a class="nav-link" href="#">Culture</a>
-            </li>
-            <li class="nav-item active">
-                    <a class="nav-link" href="#">Plats</a>
-            </li>
-           
-          </ul>
+  <nav class="navbar navbar-expand-lg navbar-light  my-navbar fixed-top ">
+      <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <!-- <a class="navbar-brand" href="#">
+            <img src="http://oi67.tinypic.com/a4r8y8.jpg" style="height: 100px">
+        </a> -->
+        <ul class=" navbar-nav mr-auto mt-2 mt-lg-0 ">
+          
+          <li class="col-md-4 nav-item  lien">
+            <a class="nav-link " href="index.html">Accueil<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="col-md-4 nav-item lien ">
+            <a class="nav-link" href="hotel.html">Hotel<span class="sr-only">(current)</span></a>
+          </li>
+          <li class=" col-md-4 nav-item lien ">
+              <a class="nav-link" href="lieu.html">Lieu</a>
+          </li>
+          <li class="col-md-4 nav-item lien active">
+                  <a class="nav-link" href="culture.html">Culture</a>
+          </li>
+          <li class="col-md-4 nav-item lien ">
+                  <a class="nav-link" href="plats.html">Plats</a>
+          </li>
          
-                <div class="col-md-2 social  orm-inline my-4 my-lg-0">
-                    <div class="row">
-                         <a class="col-md-3" href="#"><i class="fa fa-linkedin fa-2x s "></i></a> 
-                            <a class="col-md-3" href="#"><i class="fa fa-facebook fa-2x "></i></a> 
-                            <a  class="col-md-3"href="#"><i class="fa fa-twitter fa-2x "></i></a> 
-                        <a class="col-md-3" href="#"><i class="fa fa-instagram fa-2x  "></i></a>  
-                    </div>
-                        
-             </div>
-         
-        </div>
-      </nav>
+        </ul>
+       
+              <!-- <div class="col-md-2  orm-inline my-4 my-lg-0">
+                  <div class="row">
+                       <a class="col-md-3" href="#"><i class="fa fa-linkedin fa-2x  "></i></a> 
+                          <a class="col-md-3" href="#"><i class="fa fa-facebook fa-2x "></i></a> 
+                          <a  class="col-md-3"href="#"><i class="fa fa-twitter fa-2x "></i></a> 
+                      <a class="col-md-3" href="#"><i class="fa fa-instagram fa-2x  "></i></a>  
+                  </div>
+                      
+           </div> -->
+       
+      </div>
+    </nav>
 </div>
 </div>
-
 
 
 <!-- carousel  -->
@@ -137,141 +151,298 @@
                 <div class="container">
             
                   <div class="row">
-                    <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm">
-                        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="image/culture/bridal-outfit-djibouti-afar-tribe-african-traditions.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                        <div class="card-body">
-                                <p class="card-text"></p>                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                              
+                      <div class="col-md-4">
+                          <div class="card mb-4 shadow-sm interests">
+                            <div>
+                                <a href="image/culture/cul/bridal-outfit-djibouti-afar-tribe-african-traditions.jpg" class="highslide" onclick="return hs.expand(this)">
+                                  <img src="image/culture/cul/bridal-outfit-djibouti-afar-tribe-african-traditions.jpg"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                      title="Click to enlarge" height="120 px" width="107 px" />
+                                      <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                    </a> 
+                                    <div class="highslide-caption">
+                                    <p><h3></h3></p>    
+                                
+                                    </div>
                             </div>
-                            <small class="text-muted">9 mins</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm">
-                        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="image/culture/wais.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                        <div class="card-body">
-                                <p class="card-text"></p>                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                              
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm">
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="image/culture/3.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                            <div class="card-body">
-                                    <p class="card-text"></p>                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                              
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-            
-                    <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm">
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="image/culture/4.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                        <div class="card-body">
-                                <p class="card-text"></p>                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                             
+                                <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                                  <div class="card-body">
+                                    <p class="card-text"></p>                          
+                                    <div class="d-flex justify-content-between align-items-center">
+                                <!-- <div class="btn-group">
+                                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                  
+                                </div> -->
+                                
+                              </div>
                             </div>
-                            <small class="text-muted">9 mins</small>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm">
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="image/culture/198218-artisanat-de-souk-ahras-foire-nationale-de-la-femme-artisane.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                        <div class="card-body">
-                                <p class="card-text"></p>                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                             
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm interests">
+                              <div>
+                                  <a href="image/culture/cul/wais.jpg" class="highslide" onclick="return hs.expand(this)">
+                                    <img src="image/culture/cul/wais2.jpg"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                        title="Click to enlarge" height="120 px" width="107 px" />
+                                        <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                      </a> 
+                                      <div class="highslide-caption">
+                                      <p><h3></h3></p>    
+                                  
+                                      </div>
+                              </div>
+                              
+                                  <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                                    <div class="card-body">
+                                      <p class="card-text"></p>                          
+                                      <div class="d-flex justify-content-between align-items-center">
+                                  <!-- <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    
+                                  </div> -->
+                                  
+                                </div>
+                              </div>
                             </div>
-                            <small class="text-muted">9 mins</small>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm">
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="image/culture/tbb.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                        <div class="card-body">
-                          <p class="card-text"></p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                           
+                          <div class="col-md-4">
+                              <div class="card mb-4 shadow-sm interests">
+                                <div>
+                                    <a href="image/culture/cul/3.jpg" class="highslide" onclick="return hs.expand(this)">
+                                      <img src="image/culture/cul/3.jpg"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                          title="Click to enlarge" height="120 px" width="107 px" />
+                                          <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                        </a> 
+                                        <div class="highslide-caption">
+                                        <p><h3></h3></p>    
+                                    
+                                        </div>
+                                </div>
+                                
+                                    <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                                      <div class="card-body">
+                                        <p class="card-text"></p>                          
+                                        <div class="d-flex justify-content-between align-items-center">
+                                    <!-- <div class="btn-group">
+                                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                      
+                                    </div> -->
+                                    
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            <small class="text-muted">9 mins</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
             
-                    <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm">
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="image/culture/7.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                        <div class="card-body">
-                          <p class="card-text"></p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                            
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm">
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="image/culture/rere.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                        <div class="card-body">
-                          <p class="card-text"></p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                             
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm">
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="image/culture/IMG_8757.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                        <div class="card-body">
-                          <p class="card-text"></p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <div class="col-md-4">
+                                <div class="card mb-4 shadow-sm interests">
+                                  <div>
+                                      <a href="image/culture/cul/4.jpg" class="highslide" onclick="return hs.expand(this)">
+                                        <img src="image/culture/cul/4.jpg"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                            title="Click to enlarge" height="120 px" width="107 px" />
+                                            <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                          </a> 
+                                          <div class="highslide-caption">
+                                          <p><h3></h3></p>    
+                                      
+                                          </div>
+                                  </div>
+                                  
+                                      <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                                        <div class="card-body">
+                                          <p class="card-text"></p>                          
+                                          <div class="d-flex justify-content-between align-items-center">
+                                      <!-- <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        
+                                      </div> -->
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-4">
+                                  <div class="card mb-4 shadow-sm interests">
+                                    <div>
+                                        <a href="image/culture/cul/8.jpg" class="highslide" onclick="return hs.expand(this)">
+                                          <img src="image/culture/cul/8.jpg"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                              title="Click to enlarge" height="120 px" width="107 px" />
+                                              <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                            </a> 
+                                            <div class="highslide-caption">
+                                            <p><h3></h3></p>    
+                                        
+                                            </div>
+                                    </div>
+                                    
+                                        <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                                          <div class="card-body">
+                                            <p class="card-text"></p>                          
+                                            <div class="d-flex justify-content-between align-items-center">
+                                        <!-- <div class="btn-group">
+                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                          
+                                        </div> -->
+                                        
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm interests">
+                                      <div>
+                                          <a href="image/culture/cul/tbb.jpg" class="highslide" onclick="return hs.expand(this)">
+                                            <img src="image/culture/cul/tbb.jpg"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                                title="Click to enlarge" height="120 px" width="107 px" />
+                                                <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                              </a> 
+                                              <div class="highslide-caption">
+                                              <p><h3></h3></p>    
+                                          
+                                              </div>
+                                      </div>
+                                      
+                                          <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                                            <div class="card-body">
+                                              <p class="card-text"></p>                          
+                                              <div class="d-flex justify-content-between align-items-center">
+                                          <!-- <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            
+                                          </div> -->
+                                          
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
             
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                                  <div class="col-md-4">
+                                      <div class="card mb-4 shadow-sm interests">
+                                        <div>
+                                            <a href="image/culture/cul/7.jpg" class="highslide" onclick="return hs.expand(this)">
+                                              <img src="image/culture/cul/7.jpg"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                                  title="Click to enlarge" height="120 px" width="107 px" />
+                                                  <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                                </a> 
+                                                <div class="highslide-caption">
+                                                <p><h3></h3></p>    
+                                            
+                                                </div>
+                                        </div>
+                                        
+                                            <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                                              <div class="card-body">
+                                                <p class="card-text"></p>                          
+                                                <div class="d-flex justify-content-between align-items-center">
+                                            <!-- <div class="btn-group">
+                                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                              
+                                            </div> -->
+                                            
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card mb-4 shadow-sm interests">
+                                          <div>
+                                              <a href="image/culture/cul/rere.jpg" class="highslide" onclick="return hs.expand(this)">
+                                                <img src="image/culture/cul/rere.jpg"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                                    title="Click to enlarge" height="120 px" width="107 px" />
+                                                    <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                                  </a> 
+                                                  <div class="highslide-caption">
+                                                  <p><h3></h3></p>    
+                                              
+                                                  </div>
+                                          </div>
+                                          
+                                              <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                                                <div class="card-body">
+                                                  <p class="card-text"></p>                          
+                                                  <div class="d-flex justify-content-between align-items-center">
+                                              <!-- <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                                
+                                              </div> -->
+                                              
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                          <div class="card mb-4 shadow-sm interests">
+                                            <div>
+                                                <a href="image/culture/cul/9.jpg" class="highslide" onclick="return hs.expand(this)">
+                                                  <img src="image/culture/cul/9.jpg"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                                      title="Click to enlarge" height="120 px" width="107 px" />
+                                                      <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                                    </a> 
+                                                    <div class="highslide-caption">
+                                                    <p><h3></h3></p>    
+                                                
+                                                    </div>
+                                            </div>
+                                            
+                                                <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                                                  <div class="card-body">
+                                                    <p class="card-text"></p>                          
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                <!-- <div class="btn-group">
+                                                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                                  
+                                                </div> -->
+                                                
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
                   </div>
                 </div>
               </div>
 
+              
+              <!-- footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+                
+     </div>
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1">
+            <i class="fa fa-linkedin fa-2x"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1">
+            <i class="fa fa-facebook fa-2x"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-1">
+            <i class="fa fa-twitter fa-2x"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1">
+            <i class="fa fa-instagram fa-2x"></i>
+          </a>
+        </li>
+       
+      </ul>
+      <!-- Social buttons -->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+      <a href="https://www.facebook.com/">Souhaib R.</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
 </body>
 </html>
