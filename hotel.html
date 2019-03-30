@@ -10,54 +10,70 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    <script type="text/javascript" src="js/highslide.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/highslide.css" />
     <link rel="stylesheet" href="css/style.css">
     <script src="js/scrip.js"></script>
+
+    <script type="text/javascript">
+      //<![CDATA[
+      hs.registerOverlay({
+          html: '<div class="closebutton" onclick="return hs.close(this)" title="Close"></div>',
+          position: 'top right',
+          fade: 2 // fading the semi-transparent overlay looks bad in IE
+      });
+      
+      
+      hs.graphicsDir = 'js/graphics/';
+      hs.wrapperClassName = 'borderless';
+      //]]>
+      </script>
 </head>
 <body>
     
 <!-- Menu -->
 <div class="Menu">
-    <nav class="navbar navbar-expand-lg navbar-light  my-navbar fixed-top ">
-        <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="#">
-              <img src="http://oi67.tinypic.com/a4r8y8.jpg" style="height: 100px">
-          </a>
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 lien">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Accueil<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="hotel.html">Hotel</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="lieu.html">Lieu</a>
-            </li>
-            <li class="nav-item active">
-                    <a class="nav-link" href="culture.html">Culture</a>
-            </li>
-            <li class="nav-item active">
-                    <a class="nav-link" href="#">Plats</a>
-            </li>
-           
-          </ul>
+  <nav class="navbar navbar-expand-lg navbar-light  my-navbar fixed-top ">
+      <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <!-- <a class="navbar-brand" href="#">
+            <img src="http://oi67.tinypic.com/a4r8y8.jpg" style="height: 100px">
+        </a> -->
+        <ul class=" navbar-nav mr-auto mt-2 mt-lg-0 ">
+          
+          <li class="col-md-4 nav-item  lien">
+            <a class="nav-link " href="index.html">Accueil<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="col-md-4 nav-item lien active">
+            <a class="nav-link" href="hotel.html">Hotel<span class="sr-only">(current)</span></a>
+          </li>
+          <li class=" col-md-4 nav-item lien ">
+              <a class="nav-link" href="lieu.html">Lieu</a>
+          </li>
+          <li class="col-md-4 nav-item lien ">
+                  <a class="nav-link" href="culture.html">Culture</a>
+          </li>
+          <li class="col-md-4 nav-item lien ">
+                  <a class="nav-link" href="plats.html">Plats</a>
+          </li>
          
-                <div class="col-md-2 social  orm-inline my-4 my-lg-0">
-                    <div class="row">
-                         <a class="col-md-3" href="#"><i class="fa fa-linkedin fa-2x s "></i></a> 
-                            <a class="col-md-3" href="#"><i class="fa fa-facebook fa-2x "></i></a> 
-                            <a  class="col-md-3"href="#"><i class="fa fa-twitter fa-2x "></i></a> 
-                        <a class="col-md-3" href="#"><i class="fa fa-instagram fa-2x  "></i></a>  
-                    </div>
-                        
-             </div>
-         
-        </div>
-      </nav>
+        </ul>
+       
+              <!-- <div class="col-md-2  orm-inline my-4 my-lg-0">
+                  <div class="row">
+                       <a class="col-md-3" href="#"><i class="fa fa-linkedin fa-2x  "></i></a> 
+                          <a class="col-md-3" href="#"><i class="fa fa-facebook fa-2x "></i></a> 
+                          <a  class="col-md-3"href="#"><i class="fa fa-twitter fa-2x "></i></a> 
+                      <a class="col-md-3" href="#"><i class="fa fa-instagram fa-2x  "></i></a>  
+                  </div>
+                      
+           </div> -->
+       
+      </div>
+    </nav>
 </div>
 </div>
 
@@ -76,30 +92,35 @@
                 </ol>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="http://oi65.tinypic.com/16ga8eb.jpg" class="d-block w-100 " alt="...">
+                    <img src="image/hotel/kempinski/Capture.PNG" class="d-block w-100 " alt="...">
+                    <!-- src="http://oi65.tinypic.com/16ga8eb.jpg" -->
                     <div class="carousel-caption d-none d-md-block">
                       <h5>Les Hotels</h5>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="http://oi65.tinypic.com/15x5phc.jpg" class="d-block w-100 " alt="...">
+                    <img src="image/hotel/kempinski/Capture2.PNG" class="d-block w-100 " alt="...">
+                    <!-- src="http://oi65.tinypic.com/15x5phc.jpg" -->
                     <div class="carousel-caption d-none d-md-block">
                      
                     </div>
                   </div>
                   <div class="carousel-item ">
-                    <img src="http://oi65.tinypic.com/2a8q3ht.jpg" class=" d-block w-100 " alt="...">
+                    <img src="image/hotel/kempinski/Capture33.PNG" class=" d-block w-100 " alt="...">
+                    <!-- src="http://oi65.tinypic.com/2a8q3ht.jpg" -->
                     <div class="carousel-caption d-none d-md-block">
                       
                     </div>
                   </div>
                   <div class="carousel-item ">
-                        <img src="http://oi65.tinypic.com/2iw23v9.jpg" class=" d-block w-100 " alt="...">
+                        <img src="image/hotel/kempinski/Capture4.PNG" class=" d-block w-100 " alt="...">
+                        <!-- src="http://oi65.tinypic.com/2iw23v9.jpg" -->
                         <div class="carousel-caption d-none d-md-block">
                         </div>
                       </div>
                   <div class="carousel-item ">
-                        <img src="http://oi63.tinypic.com/6rrnzs.jpg" class=" d-block w-100 " alt="...">
+                        <img src="image/hotel/kempinski/Capture5.PNG" class=" d-block w-100 " alt="...">
+                        <!-- src="http://oi63.tinypic.com/6rrnzs.jpg" -->
                         <div class="carousel-caption d-none d-md-block">
         
                         </div>
@@ -135,138 +156,304 @@
                   <div class="row">
                     <div class="col-md-4">
                       <div class="card mb-4 shadow-sm interests">
-                        <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                        <div class="card-body">
-                                <p class="card-text"></p>                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
+                        <div>
+                            <a href="image/hotel/kempinski/2.PNG" class="highslide" onclick="return hs.expand(this)">
+                              <img src="image/hotel/kempinski/2.PNG"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                  title="Click to enlarge" height="120 px" width="107 px" />
+                                  <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                </a> 
+                                <div class="highslide-caption">
+                                <p><h3>LE LIEU IDÉAL POUR VOTRE RÉUNION À DJIBOUTI</h3></p>    
+                                Réunion au Djibouti Palace Kempinski nous mettons à votre disposition sept salles de bal élégantes, des salles de réunion toute équipées et une magnifique pelouse royale . 
+                                Vous y trouverez des installations de traduction dernier cri, indispensables dans cette région multilingue. 
+                                </div>
+                        </div>
+                        
+                            <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                              <div class="card-body">
+                                <p class="card-text"></p>                          
+                                <div class="d-flex justify-content-between align-items-center">
+                            <!-- <div class="btn-group">
                               <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                               
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm interests">
-                        <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="http://oi63.tinypic.com/35ix9qu.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                        <div class="card-body">
-                                <p class="card-text"></p>                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                              
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm interests">
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="http://oi66.tinypic.com/2m5jiw6.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                            <div class="card-body">
-                                    <p class="card-text"></p>                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                              
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-            
-                    <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm interests">
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="http://oi68.tinypic.com/2ugf2hj.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                        <div class="card-body">
-                                <p class="card-text"></p>                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            </div> -->
                             
-                            </div>
-                            <small class="text-muted">9 mins</small>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm interests">
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="http://oi65.tinypic.com/15x5phc.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                        <div class="card-body">
-                                <p class="card-text"></p>                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                             
+                        <div class="card mb-4 shadow-sm interests">
+                          <div>
+                              <a href="image/hotel/kempinski/1.PNG" class="highslide" onclick="return hs.expand(this)">
+                                <img src="image/hotel/kempinski/1.PNG"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                    title="Click to enlarge" height="120 px" width="107 px" />
+                                    <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                  </a> 
+                                  <div class="highslide-caption">
+                                  <p><h3>EVÈNEMENTS</h3></p> 
+                                  Tout au long de l'année, le Djibouti Palace Kempinski vous propose de nombreux évènements inoubliables et exceptionnelles. Pour plus d'informations, n'hésitez pas à nous contacter au +253 21 32 55 55.   
+                                  </div>
+                          </div>
+                          
+                              <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                                <div class="card-body">
+                                  <p class="card-text"></p>                          
+                                  <div class="d-flex justify-content-between align-items-center">
+                              <!-- <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                
+                              </div> -->
+                              
                             </div>
-                            <small class="text-muted">9 mins</small>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm interests">
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="http://oi63.tinypic.com/xqkuhv.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                        <div class="card-body">
-                          <p class="card-text"></p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                           
+                      <div class="col-md-4">
+                          <div class="card mb-4 shadow-sm interests">
+                            <div>
+                                <a href="image/hotel/kempinski/3.PNG" class="highslide" onclick="return hs.expand(this)">
+                                  <img src="image/hotel/kempinski/3.PNG"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                      title="Click to enlarge" height="120 px" width="107 px" />
+                                      <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                    </a> 
+                                    <div class="highslide-caption">
+                                    <p><h3>MARIAGE</h3></p> 
+                                    Vous avez toujours rêvé de vous marier en Afrique?Contactez alors nos professionnels pour rendre votre rêve réalité!
+
+                                    Avec sa magnifique vue sur le Golfe de Tadjourah, le Djibouti Palace Kempinski est l’endroit idéal pour un mariage d'exception.                                    </div>
                             </div>
-                            <small class="text-muted">9 mins</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-            
-                    <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm interests">
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="http://oi63.tinypic.com/15d788y.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                        <div class="card-body">
-                          <p class="card-text"></p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                             
+                                <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                                  <div class="card-body">
+                                    <p class="card-text"></p>                          
+                                    <div class="d-flex justify-content-between align-items-center">
+                                <!-- <div class="btn-group">
+                                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                  
+                                </div> -->
+                                
+                              </div>
                             </div>
-                            <small class="text-muted">9 mins</small>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm interests">
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="http://oi68.tinypic.com/aoxnas.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                        <div class="card-body">
-                          <p class="card-text"></p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                             
-                            </div>
-                            <small class="text-muted">9 mins</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card mb-4 shadow-sm interests">
-                            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="http://oi67.tinypic.com/5xoaxy.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>
-                        <div class="card-body">
-                          <p class="card-text"></p>
-                          <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                              <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
             
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm interests">
+                              <div>
+                                  <a href="image/hotel/kempinski/4.PNG" class="highslide" onclick="return hs.expand(this)">
+                                    <img src="image/hotel/kempinski/4.PNG"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                        title="Click to enlarge" height="120 px" width="107 px" />
+                                        <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                      </a> 
+                                      <div class="highslide-caption">
+                                      <p><h3>CAHMBRE DE LUXE</h3></p> 
+                                      Decorees avec de riches tissus aux couleur naturelles qui s'inspirent des tons du paysage Djiboutien 
+
+                                     </div>
+                              </div>
+                              
+                                  <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                                    <div class="card-body">
+                                      <p class="card-text"></p>                          
+                                      <div class="d-flex justify-content-between align-items-center">
+                                  <!-- <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    
+                                  </div> -->
+                                  
+                                </div>
+                              </div>
                             </div>
-                            <small class="text-muted">9 mins</small>
                           </div>
+                          <div class="col-md-4">
+                              <div class="card mb-4 shadow-sm interests">
+                                <div>
+                                    <a href="image/hotel/kempinski/5.PNG" class="highslide" onclick="return hs.expand(this)">
+                                      <img src="image/hotel/kempinski/5.PNG"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                          title="Click to enlarge" height="120 px" width="107 px" />
+                                          <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                        </a> 
+                                        <div class="highslide-caption">
+                                        <p><h3>CAHMBRE AVEC UN VUE SUR LA MER</h3></p> 
+                                          magnifique Decorees avec style africain et oriental 
+                                       </div>
+                                </div>
+                                
+                                    <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                                      <div class="card-body">
+                                        <p class="card-text"></p>                          
+                                        <div class="d-flex justify-content-between align-items-center">
+                                    <!-- <div class="btn-group">
+                                      <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                      
+                                    </div> -->
+                                    
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card mb-4 shadow-sm interests">
+                                  <div>
+                                      <a href="http://oi67.tinypic.com/5xoaxy.jpg" class="highslide" onclick="return hs.expand(this)">
+                                        <img src="http://oi67.tinypic.com/5xoaxy.jpg"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                            title="Click to enlarge" height="120 px" width="107 px" />
+                                            <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                          </a> 
+                                          <div class="highslide-caption">
+                                          <p><h3>CAHMBRE AVEC UN VUE SUR LA MER</h3></p> 
+                                            magnifique Decorees avec style africain et oriental 
+                                         </div>
+                                  </div>
+                                  
+                                      <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                                        <div class="card-body">
+                                          <p class="card-text"></p>                          
+                                          <div class="d-flex justify-content-between align-items-center">
+                                      <!-- <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        
+                                      </div> -->
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+            
+                              <div class="col-md-4">
+                                  <div class="card mb-4 shadow-sm interests">
+                                    <div>
+                                        <a href="image/hotel/kempinski/6.PNG" class="highslide" onclick="return hs.expand(this)">
+                                          <img src="image/hotel/kempinski/6.PNG"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                              title="Click to enlarge" height="120 px" width="107 px" />
+                                              <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                            </a> 
+                                            <div class="highslide-caption">
+                                            <p><h3>PISCINE</h3></p> 
+                                            Là où les eaux de la Mer Rouge et de l'Océan Indien se rencontrent, une oasis de tranquillité.                                           </div>
+                                    </div>
+                                    
+                                        <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                                          <div class="card-body">
+                                            <p class="card-text"></p>                          
+                                            <div class="d-flex justify-content-between align-items-center">
+                                        <!-- <div class="btn-group">
+                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                          
+                                        </div> -->
+                                        
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                    <div class="col-md-4">
+                                  <div class="card mb-4 shadow-sm interests">
+                                    <div>
+                                        <a href="image/hotel/kempinski/7.PNG" class="highslide" onclick="return hs.expand(this)">
+                                          <img src="image/hotel/kempinski/7.PNG"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                              title="Click to enlarge" height="120 px" width="107 px" />
+                                              <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                            </a> 
+                                            <div class="highslide-caption">
+                                            <p><h3>BARBECUES</h3></p> 
+                                            Venez profiter de nos somptueux barbecues, de nos délicieux fruits de mer et de nos grillades. Succombez a notre plat signature le "poisson yéménite" ou le poisson mariné dans une croûte de sel du Lac Assal.                                      
+                                          
+                                           </div>
+                                    </div>
+                                    
+                                        <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                                          <div class="card-body">
+                                            <p class="card-text"></p>                          
+                                            <div class="d-flex justify-content-between align-items-center">
+                                        <!-- <div class="btn-group">
+                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                          
+                                        </div> -->
+                                        
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm interests">
+                                      <div>
+                                          <a href="image/hotel/kempinski/8.PNG" class="highslide" onclick="return hs.expand(this)">
+                                            <img src="image/hotel/kempinski/8.PNG"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                                title="Click to enlarge" height="120 px" width="107 px" />
+                                                <!-- src="http://oi63.tinypic.com/6rrnzs.jpg   -->
+                                              </a> 
+                                              <div class="highslide-caption">
+                                              <p><h3>TENTAZIONI</h3></p> 
+                                              Tentazioni, notre restaurant italien est ouvert du déjeuner au dîner sans interruption avec la vue sur la baie
+
+                                              Avec un décor traditionnel de Trattoria, Tentazioni propose une cuisine italienne qui ravivera vos papilles.                                             
+                                             </div>
+                                      </div>
+                                      
+                                          <!-- <img class="bd-placeholder-img card-img-top " width="100%" height="225" src="http://oi63.tinypic.com/6rrnzs.jpg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text>                        -->
+                                            <div class="card-body">
+                                              <p class="card-text"></p>                          
+                                              <div class="d-flex justify-content-between align-items-center">
+                                          <!-- <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                            
+                                          </div> -->
+                                          
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+
+              <!-- footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+                
+     </div>
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1">
+            <i class="fa fa-linkedin fa-2x"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1">
+            <i class="fa fa-facebook fa-2x"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-1">
+            <i class="fa fa-twitter fa-2x"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1">
+            <i class="fa fa-instagram fa-2x"></i>
+          </a>
+        </li>
+       
+      </ul>
+      <!-- Social buttons -->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright:
+      <a href="https://www.facebook.com/">Souhaib R.</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
 </body>
 </html>
