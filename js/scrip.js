@@ -29,3 +29,11 @@ $('#myTab a').on('click', function (e) {
     e.preventDefault()
     $(this).tab('show')
   })
+
+
+  function myFunction() {
+    <a href="image/10636286_737783919627212_3286028981064425882_n.jpg" class="highslide" onclick="return hs.expand(this)">
+                                    <img src="image/10636286_737783919627212_3286028981064425882_n.jpg"  class="bd-placeholder-img card-img-top " width="100%" height="225"    alt="Highslide JS"
+                                        title="Click to enlarge" height="120" width="10" />
+                                      </a>   
+  }
